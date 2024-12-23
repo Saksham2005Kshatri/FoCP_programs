@@ -35,13 +35,24 @@ def mean(array):
 
 temp_list = []
 
-for i in range(6):
-    temp = (input("Enter temperature in celsius ending with 'C': "))
-    if check_endswith(temp): 
-        temp_list.append(temp)
-    else:
-        print("Invalid try again")
+def main_loop():
 
-values = extract_value(temp_list)
+    while True:
 
-print(f"MAXIMUM: {maximum(values)} \nMINIMUM: {minimum(values)} \nMEAN: {mean(values)}")
+        for i in range(6):
+            temp = (input("Enter temperature in celsius ending with 'C': "))
+            if len(temp) == 0:
+                print("Please enter a value.")
+                return -1
+            if check_endswith(temp): 
+                temp_list.append(temp)
+            else:
+                print("Invalid try again")
+        break
+
+    values = extract_value(temp_list)
+
+    print(f"MAXIMUM: {maximum(values)} \nMINIMUM: {minimum(values)} \nMEAN: {mean(values)}")
+
+
+main_loop()

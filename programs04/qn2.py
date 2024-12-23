@@ -11,5 +11,5 @@ def check_case(string):
     return upper_count, lower_count
 
 
-upper_C, lower_C = check_case("SaKsHaM")
+upper_C, lower_C = check_case("RiWaZ")
 print(f"UPPERCASE = {upper_C}\n LOWERCASE = {lower_C}\n")

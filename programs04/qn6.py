@@ -10,6 +10,8 @@ def celsius_to_fahrenheit(cels):
  
         fahr = (numerical * 1.8) + 32
         return fahr
+    else:
+        return "End with C pls"
     
 
 celsius = input("Enter temperature in celsius ending in 'C' (eg: 25C): ")
